@@ -1,0 +1,68 @@
+how to configure git ssh :
+
+-------------------
+commande line 
+--------------------
+1.
+tunvqtvalidadm@tunvqtvalidadm:~$ cd ~/.ssh
+tunvqtvalidadm@tunvqtvalidadm:~/.ssh$ ls
+tunvqtvalidadm@tunvqtvalidadm:~/.ssh$ ~/.ssh# ls
+bash: /home/tunvqtvalidadm/.ssh#: No such file or directory
+tunvqtvalidadm@tunvqtvalidadm:~/.ssh$ ~/.ssh ls
+bash: /home/tunvqtvalidadm/.ssh: Is a directory
+tunvqtvalidadm@tunvqtvalidadm:~/.ssh$ ls
+tunvqtvalidadm@tunvqtvalidadm:~/.ssh$ ssh-keygen -t rsa -C "st.belaid.mabrouk@gmail.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/tunvqtvalidadm/.ssh/id_rsa): 
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /home/tunvqtvalidadm/.ssh/id_rsa
+Your public key has been saved in /home/tunvqtvalidadm/.ssh/id_rsa.pub
+The key fingerprint is:
+SHA256:8FPlOEyw/XJUrsGxL1xt4p+EOgiYKzzBaopzuPM75/M st.belaid.mabrouk@gmail.com
+The key's randomart image is:
++---[RSA 3072]----+
+|        ... o .  |
+|         = = = . |
+|      . . * * + o|
+|  .   oo . = *.o |
+|   o o .S . *.o. |
+|  o . . ...o.....|
+| + + .   . o   ..|
+|B o =       .    |
+|+*o=.oE          |
++----[SHA256]-----+
+tunvqtvalidadm@tunvqtvalidadm:~/.ssh$ ls
+id_rsa  id_rsa.pub
+tunvqtvalidadm@tunvqtvalidadm:~/.ssh$ ls -la
+total 16
+drwx------  2 tunvqtvalidadm tunvqtvalidadm 4096 déc.   9 15:22 .
+drwxr-xr-x 26 tunvqtvalidadm tunvqtvalidadm 4096 déc.   9 11:47 ..
+-rw-------  1 tunvqtvalidadm tunvqtvalidadm 2610 déc.   9 15:22 id_rsa
+-rw-r--r--  1 tunvqtvalidadm tunvqtvalidadm  581 déc.   9 15:22 id_rsa.pub
+tunvqtvalidadm@tunvqtvalidadm:~/.ssh$ less is_rsa.pub
+is_rsa.pub: No such file or directory
+tunvqtvalidadm@tunvqtvalidadm:~/.ssh$ less id_rsa.pub
+tunvqtvalidadm@tunvqtvalidadm:~/.ssh$ less id_rsa.pub
+
+
+--------------------------------
+2.
+
+github.com
+settings 
+add key ssh code 
+
+------------------------------------
+3.
+tunvqtvalidadm@tunvqtvalidadm:~/mabroukSTing/CubeProgrammer_Valid$ git remote -v 
+origin	https://github.com/mabroukST-QA/CubeProgrammer_Valid.git (fetch)
+origin	https://github.com/mabroukST-QA/CubeProgrammer_Valid.git (push)
+tunvqtvalidadm@tunvqtvalidadm:~/mabroukSTing/CubeProgrammer_Valid$ git push
+Username for 'https://github.com': ^C
+tunvqtvalidadm@tunvqtvalidadm:~/mabroukSTing/CubeProgrammer_Valid$ git remote set-url origin git@github.com:mabroukST-QA/CubeProgrammer_Valid.git 
+tunvqtvalidadm@tunvqtvalidadm:~/mabroukSTing/CubeProgrammer_Valid$ git remote -v 
+origin	git@github.com:mabroukST-QA/CubeProgrammer_Valid.git (fetch)
+origin	git@github.com:mabroukST-QA/CubeProgrammer_Valid.git (push)
+
+
