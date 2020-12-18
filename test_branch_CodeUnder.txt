@@ -1,5 +1,2 @@
-<<<<<<< HEAD
 2.add test branch mabTest
-=======
 1.test branch under mabrouk
->>>>>>> b43b74ab9c843112bfa51d31a71d732e9f6ceefd
